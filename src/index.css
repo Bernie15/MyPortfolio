@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #0a0a1a;
+  --bg-deep: #060612;
+  --panel: rgba(20, 20, 50, 0.6);
+  --panel-strong: rgba(30, 30, 70, 0.75);
+  --border: rgba(124, 92, 252, 0.1);
+  --border-strong: rgba(124, 92, 252, 0.25);
+  --text: #a0a0c0;
+  --muted: #6b6b8d;
+  --heading: #ededff;
+  --accent: #7c5cfc;
+  --accent-secondary: #5ce1e6;
+  --accent-strong: #9b82ff;
+  --gradient-primary: linear-gradient(135deg, #7c5cfc, #5ce1e6);
+  --gradient-subtle: linear-gradient(135deg, rgba(124, 92, 252, 0.15), rgba(92, 225, 230, 0.08));
+  --card-shadow: 0 8px 32px rgba(124, 92, 252, 0.08), 0 0 0 1px rgba(124, 92, 252, 0.06);
+  --glow: 0 0 40px rgba(124, 92, 252, 0.15);
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+
+  color: var(--text);
+  background: var(--bg);
+  font: 16px/1.65 var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 92, 252, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(92, 225, 230, 0.06), transparent);
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--heading);
+}
+
+h1 {
+  font-size: clamp(3.6rem, 9vw, 7.2rem);
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4.8vw, 3.6rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p,
+blockquote {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 16px;
+  }
+}
