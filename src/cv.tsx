@@ -149,28 +149,18 @@ function CV() {
         </ul>
       </div>
 
-      {/* Education & Certs */}
-      <div className="cv-two-col">
-        <div className="cv-block">
-          <h3 className="cv-block-title">Education</h3>
-          {education.map((e) => (
-            <div className="cv-entry" key={e.degree}>
-              <div className="cv-entry-header">
-                <h3>{e.degree}</h3>
-                <span className="cv-period">{e.period}</span>
-              </div>
-              <p className="cv-company">{e.school}</p>
+      {/* Education */}
+      <div className="cv-block">
+        <h3 className="cv-block-title">Education</h3>
+        {education.map((e) => (
+          <div className="cv-entry" key={e.degree}>
+            <div className="cv-entry-header">
+              <h3>{e.degree}</h3>
+              <span className="cv-period">{e.period}</span>
             </div>
-          ))}
-        </div>
-        <div className="cv-block">
-          <h3 className="cv-block-title">Certifications</h3>
-          <ul className="cv-cert-list">
-            {certifications.map((c) => (
-              <li key={c}>{c}</li>
-            ))}
-          </ul>
-        </div>
+            <p className="cv-company">{e.school}</p>
+          </div>
+        ))}
       </div>
     </section>
   )
