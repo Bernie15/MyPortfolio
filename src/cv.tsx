@@ -14,16 +14,12 @@ const experience = [
 
 const education = [
   {
-    degree: 'Bachelor of Science in Information Technology',
-    school: 'University / College Name',
-    period: '2018 – 2022',
+    degree: 'Bachelor of Science in Computer Engineering',
+    school: 'Marinduque State College',
+    period: '2015 – 2020',
   },
 ]
 
-const certifications = [
-  'Microsoft Certified: Azure Fundamentals (AZ-900)',
-  'Postman API Fundamentals Student Expert',
-]
 
 const technicalSkills = {
   'Front-End': ['React', 'TypeScript', 'HTML5 / CSS3'],
