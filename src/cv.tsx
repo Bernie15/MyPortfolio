@@ -4,10 +4,9 @@ const experience = [
     company: 'Previous Employer',
     period: '2022 – 2025',
     highlights: [
-      'Resolved 50+ tickets/day across hardware, software, and network issues — building strong diagnostic and problem-solving skills.',
-      'Automated recurring tasks with PowerShell scripts, reducing manual resolution time by 30%.',
+      'Can resolve 20+ tickets/day across hardware, software, and network issues — building strong diagnostic and problem-solving skills.',
       'Collaborated with development teams to escalate and document application-level bugs via ticketing systems.',
-      'Managed Active Directory accounts, group policies, and access permissions for 500+ users.',
+      'Managed Active Directory accounts, group policies, and access permissions.',
       'Provided remote and on-site support, strengthening communication and client-facing skills.',
     ],
   },
@@ -27,11 +26,11 @@ const certifications = [
 ]
 
 const technicalSkills = {
-  'Front-End': ['React', 'Blazor (WebAssembly & Server)', 'TypeScript', 'HTML5 / CSS3', 'Tailwind CSS'],
+  'Front-End': ['React', 'TypeScript', 'HTML5 / CSS3'],
   'Back-End': ['ASP.NET Core (MVC & Web API)', 'C#', 'Entity Framework Core', 'Node.js / Express'],
-  'Databases': ['SQL Server', 'T-SQL', 'SSMS'],
-  'API & Testing': ['RESTful API Design', 'Postman', 'Swagger / OpenAPI', 'JWT Authentication'],
-  'Tools & Workflow': ['Git / GitHub', 'Visual Studio / VS Code', 'Azure DevOps', 'Agile / Scrum'],
+  'Databases': ['SQL Server', 'PostgreSQL', 'SSMS'],
+  'API & Testing': ['RESTful API Design', 'Postman'],
+  'Tools & Workflow': ['Git / GitHub', 'Visual Studio / VS Code', 'Agile / Scrum'],
 }
 
 const projects = [
@@ -39,27 +38,26 @@ const projects = [
     title: 'Employee Management System',
     stack: ['ASP.NET Core Web API', 'React', 'SQL Server', 'Postman'],
     bullets: [
-      'Built a full-stack CRUD application with ASP.NET Core Web API and React front-end.',
-      'Designed relational database schema in SQL Server with Entity Framework Core migrations.',
-      'Tested and documented all endpoints using Postman collections and environment variables.',
+      'Available Soon',
     ],
   },
   {
-    title: 'Personal Finance Tracker',
-    stack: ['Blazor WebAssembly', 'ASP.NET Core', 'SQL Server'],
+    title: 'Personal Financial Tracker',
+    stack: ['React', 'Node.js', 'PostgreSQL'],
+    link: 'https://financial-tracker-liard.vercel.app/',
     bullets: [
-      'Developed an interactive Blazor WASM dashboard for budget tracking with chart visualizations.',
-      'Implemented JWT-based authentication and role-based authorization on the API layer.',
-      'Used stored procedures and views in SQL Server for reporting queries.',
+      'Built a full-stack budgeting app with budget categories, recurring transactions, and bank-style account summaries.',
+      'Integrated chart visualizations for spending breakdowns and monthly trends using dynamic data from a REST API.',
+      'Implemented a Node.js/Express back-end with RESTful endpoints for transactions, categories, and summary reports.',
+      'Used stored procedures and views in PostgreSQL for efficient reporting queries and data aggregation.',
+      'Deployed the front-end on Vercel with secure user authentication gating access to financial data.',
     ],
   },
   {
     title: 'API Integration Hub',
     stack: ['React', 'TypeScript', 'REST APIs', 'Postman'],
     bullets: [
-      'Created a React app that consumes multiple third-party APIs with unified error handling.',
-      'Built reusable service layers with Axios interceptors for token refresh and retry logic.',
-      'Validated all integrations through Postman automated test suites before front-end wiring.',
+      'Available Soon',
     ],
   },
 ]
@@ -78,8 +76,8 @@ function CV() {
       <p className="label">Curriculum Vitae</p>
       <h2>Career Shift: Service Desk → Web Developer</h2>
       <p className="cv-intro">
-        IT professional transitioning into web development with hands-on project experience
-        in API integration, ASP.NET Core, React, Blazor, SQL Server, and Postman. Combining
+       I've worked as an IT Servicedesk and now transitioning into web development with hands-on project experience
+        in Frontend development utilizing stacks like REACT,API integration, ASP.NET Core, React, Blazor, SQL Server, and Postman. Combining
         strong technical support foundations with modern full-stack development skills.
       </p>
 
@@ -107,7 +105,7 @@ function CV() {
           {projects.map((p) => (
             <article className="cv-entry" key={p.title}>
               <div className="cv-entry-header">
-                <h3>{p.title}</h3>
+                <h3>{'link' in p && p.link ? <a href={p.link} target="_blank" rel="noreferrer">{p.title}</a> : p.title}</h3>
               </div>
               <ul className="tag-list" style={{ marginBottom: 12 }}>
                 {p.stack.map((t) => (

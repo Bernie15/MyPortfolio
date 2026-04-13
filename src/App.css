@@ -272,6 +272,18 @@
   transform: translateY(-1px);
 }
 
+.stack-list li.neon {
+  border-color: rgba(124, 92, 252, 0.45);
+  box-shadow: 0 0 6px rgba(124, 92, 252, 0.35), 0 0 20px rgba(124, 92, 252, 0.15);
+  background: rgba(124, 92, 252, 0.12);
+  color: #e0d4ff;
+}
+
+.stack-list li.neon:hover {
+  box-shadow: 0 0 10px rgba(124, 92, 252, 0.5), 0 0 30px rgba(124, 92, 252, 0.25);
+  border-color: rgba(124, 92, 252, 0.6);
+}
+
 /* ───── Projects ───── */
 
 .project-grid {
@@ -294,6 +306,10 @@
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
+
+.project-card--upcoming {
+  cursor: pointer;
+}
 
 .project-card:hover {
   border-color: var(--border-strong);
@@ -667,5 +683,37 @@
 
   .hero-actions {
     flex-direction: column;
+  }
+}
+
+/* ───── Toast ───── */
+
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 28px;
+  border-radius: 12px;
+  background: rgba(20, 20, 50, 0.92);
+  border: 1px solid rgba(124, 92, 252, 0.35);
+  color: var(--heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 20px rgba(124, 92, 252, 0.25), 0 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  animation: toast-in 0.35s ease-out;
+  white-space: nowrap;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
