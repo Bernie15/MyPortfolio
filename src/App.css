@@ -340,12 +340,19 @@
 .tag-list li {
   padding: 4px 12px;
   border-radius: 6px;
-  background: rgba(124, 92, 252, 0.08);
-  border: 1px solid rgba(124, 92, 252, 0.12);
-  color: var(--muted);
+  background: rgba(124, 92, 252, 0.12);
+  border: 1px solid rgba(124, 92, 252, 0.45);
+  color: #e0d4ff;
   font-size: 0.76rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  box-shadow: 0 0 6px rgba(124, 92, 252, 0.35), 0 0 20px rgba(124, 92, 252, 0.15);
+  transition: box-shadow 250ms, border-color 250ms;
+}
+
+.tag-list li:hover {
+  box-shadow: 0 0 10px rgba(124, 92, 252, 0.5), 0 0 30px rgba(124, 92, 252, 0.25);
+  border-color: rgba(124, 92, 252, 0.6);
 }
 
 /* ───── About ───── */
