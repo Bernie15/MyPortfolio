@@ -5,17 +5,17 @@ import CV from './cv'
 const featuredProjects = [
   {
     title: 'Financial Tracker',
-    description: 'Budget categories, recurring transactions, charts, and bank-style summaries powered by a REST API.',
+    description: 'Budget categories, recurring transactions, charts, and generate monthly report using AI.',
     stack: ['React', 'JavaScript', 'Vite','PostgreSQL', 'Node.js'],
     link: 'https://financial-tracker-liard.vercel.app/',
   },
   {
-    title: 'Music Player',
-    description: 'Playlists, queue controls, audio progress sync, and external API integration for track metadata.',
-    stack: ['React', 'Context API', 'Audio API', 'REST'],
+    title: 'Web Scraping for Data Collection',
+    description: 'Automated workflows for scraping and storing data from multiple sources, with a REST API for retrieval.',
+    stack: ['React','N8N', 'Google APIs'],
   },
   {
-    title: 'Social Sphere',
+    title: 'AI Chat Agent',
     description: 'Social feed with profiles, comments, likes, post composer flows, and JWT-authenticated routes.',
     stack: ['React', 'React Router', 'Node.js', 'JWT'],
   },
